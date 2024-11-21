@@ -10,7 +10,7 @@ for(let i = 0; i < numberofColorBoxes; i++){
 
 // home background animation
 const typed= new Typed('.multiple-text', {
-    strings: ['Student', 'Python Developer'],
+    strings: ['Data Analyst', 'Python Developer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,

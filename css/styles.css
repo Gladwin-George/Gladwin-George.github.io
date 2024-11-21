@@ -23,7 +23,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: var(--primary-color); 
+    background: linear-gradient(135deg, var(--primary-color), #9d00ff); 
     color: white; 
     font-weight: bold;
     font-size: medium;
@@ -192,7 +192,8 @@ section {
 /* about */
 #about{
     background: rgb(0,83,246);
-    background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgba(0,232,255,1) 100%);
+    /* background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgba(0,232,255,1) 100%); */
+    background: linear-gradient(1deg, rgba(0, 82, 246, 0) 0%, rgb(187, 0, 255) 100%);
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -261,6 +262,97 @@ section {
     margin-left: 10px;
 }
 
+/* projects */
+.projects {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.projects h1 {
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+    font-family: 'Audiowide', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-weight: bolder; /* Added font-weight for bold text */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.141);  */
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    background: linear-gradient(135deg, hsl(202, 100%, 50%), #6200ff77);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.481);
+    margin: 20px;
+    padding: 20px;
+    width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.project-item:hover {
+    color: #ffffff;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgb(0, 38, 255);
+    background: linear-gradient(135deg, #0056b3, #aa00ff);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.project-item p {
+    margin: 10px 0;
+}
+
+.project-skills{
+    margin: 10px 0;
+}
+
+.project-skills-btn{
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.project-item .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.project-item .btn:hover {
+    background-color: #9d00ff;
+}
 
 
 /* patents */
@@ -273,6 +365,7 @@ section {
     flex-wrap: wrap;
     padding: 20px;
     position: relative;
+    /* background-color: #e2b4ef; */
 }
 
 
@@ -305,7 +398,7 @@ section {
     perspective: 100em;
     margin:25px;
     box-shadow:30px 40px 40px rgba(0,0,0,0.2);
-    
+
 }
 
 .cover{
@@ -339,7 +432,7 @@ section {
 
 .coverfront{
     position: relative;
-    background: #00aeff;
+    background: linear-gradient(135deg, hsl(202, 100%, 50%), #f200ff);
     text-align: center;
     border-radius: 0px 10px 10px 0px ;
     border: 2px solid #000000;
