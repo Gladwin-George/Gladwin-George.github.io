@@ -14,7 +14,7 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    
+    scroll-behavior: smooth;   
 }
 
 /* navbar */
@@ -23,7 +23,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: linear-gradient(135deg, var(--primary-color), #9d00ff); 
+    background: var(--primary-color);
+    /* background: linear-gradient(135deg, var(--primary-color), #9d00ff);  */
     color: white; 
     font-weight: bold;
     font-size: medium;
@@ -191,9 +192,9 @@ section {
 
 /* about */
 #about{
-    background: rgb(0,83,246);
-    /* background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgba(0,232,255,1) 100%); */
-    background: linear-gradient(1deg, rgba(0, 82, 246, 0) 0%, rgb(187, 0, 255) 100%);
+    /* background: rgb(0,83,246); */
+    background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgb(0, 162, 255) 100%);
+    /* background: linear-gradient(1deg, rgba(0, 82, 246, 0) 0%, rgb(187, 0, 255) 100%); */
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -263,9 +264,10 @@ section {
 }
 
 /* projects */
-.projects {
-    padding: 50px 0;
+#projects {
+    padding: 40px 0;
     text-align: center;
+    height: auto;
 }
 
 .projects h1 {
@@ -281,9 +283,16 @@ section {
     letter-spacing: 2px;
     position: relative;
     display: inline-block;
-    padding-bottom: 10px;
-    font-weight: bolder; /* Added font-weight for bold text */
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.141);  */
+    font-weight:bolder; 
+    text-shadow: 2px 2px 1px rgba(230, 0, 255, 0.1); 
+}
+
+.projects h1:hover{
+    background: linear-gradient(135deg, #00d4ff, #f700ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .project-list {
@@ -295,7 +304,7 @@ section {
 .project-item {
     background: linear-gradient(135deg, hsl(202, 100%, 50%), #6200ff77);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.481);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     margin: 20px;
     padding: 20px;
     width: 350px;
@@ -363,7 +372,7 @@ section {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 60px 20px; 
     position: relative;
     /* background-color: #e2b4ef; */
 }
