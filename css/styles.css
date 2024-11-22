@@ -24,7 +24,6 @@ nav {
     align-items: center;
     padding: 1rem;
     background: var(--primary-color);
-    /* background: linear-gradient(135deg, var(--primary-color), #9d00ff);  */
     color: white; 
     font-weight: bold;
     font-size: medium;
@@ -192,9 +191,8 @@ section {
 
 /* about */
 #about{
-    /* background: rgb(0,83,246); */
-    background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgb(0, 162, 255) 100%);
-    /* background: linear-gradient(1deg, rgba(0, 82, 246, 0) 0%, rgb(187, 0, 255) 100%); */
+    background:  rgb(0, 162, 255) 100%;
+    /* background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgb(0, 162, 255) 100%); */
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -262,6 +260,65 @@ section {
 .btn, .side-btn{
     margin: 10px 10px 10px 0px;
 }
+
+/* SKILLS */
+.skills {
+    height: auto;
+    padding: 60px 20px;
+    background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgb(0, 162, 255) 100%);
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.skill {
+    margin: 10px;
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.384);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.skill-icon:hover {
+    transform: scale(1.1); 
+    box-shadow: 2px 2px 8px rgb(0, 89, 255); 
+}
+
+.skill-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
 
 /* projects */
 #projects {
@@ -622,8 +679,15 @@ section {
 @media screen and (max-width: 536px){
 
     .patents-txt h1{
-        padding-right: 50px;
+        padding-right: 30px;
     }
+
+    .patents-txt h2{
+        font-size: 40px;
+    }
+
+
+    
 
     /* footer */
     .footer-column:nth-child(1){
