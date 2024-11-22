@@ -191,8 +191,7 @@ section {
 
 /* about */
 #about{
-    background:  rgb(0, 162, 255) 100%;
-    /* background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgb(0, 162, 255) 100%); */
+    background: rgb(0, 162, 255); 
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -265,7 +264,7 @@ section {
 .skills {
     height: auto;
     padding: 60px 20px;
-    background: linear-gradient(1deg, rgba(0,83,246,0) 0%, rgb(0, 162, 255) 100%);
+    background: linear-gradient(to bottom, rgba(0, 162, 255, 1) 0%, rgba(0, 162, 255, 0) 100%); 
     text-align: center;
 }
 
@@ -305,7 +304,7 @@ section {
 
 .skill-icon:hover {
     transform: scale(1.1); 
-    box-shadow: 2px 2px 8px rgb(0, 89, 255); 
+    box-shadow: 2px 2px 8px rgb(0, 162, 255); 
 }
 
 .skill-icon img {
