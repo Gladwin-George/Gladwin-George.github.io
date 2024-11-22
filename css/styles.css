@@ -603,6 +603,11 @@ section {
 }
 
 @media screen and (max-width: 536px){
+
+    .patents-txt h1{
+        padding-right: 50px;
+    }
+
     /* footer */
     .footer-column:nth-child(1){
         display: none;
@@ -660,6 +665,10 @@ section {
 
     .nav-link{
         font-size: 1.5rem;
+    }
+
+    #about {
+        height: auto; 
     }
 
     .aboutme {
