@@ -277,7 +277,7 @@ section {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    margin-bottom: 10px;
+    margin-top: 40px;
     font-family: 'Audiowide', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -745,7 +745,7 @@ section {
 }
 
 
-@media screen and (max-width: 360px){
+/* @media screen and (max-width: 360px){
     #patents{
         background: #009c15;
     }
@@ -764,4 +764,4 @@ section {
         font-size: 13px;
         padding: 20px 110px 40px 40px;
     }
-}
+} */
