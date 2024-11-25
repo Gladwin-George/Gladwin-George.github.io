@@ -7,7 +7,7 @@
 :root{
     --primary-color: #007BFF;
     --bg-color: #ffffff;
-    --second-bg-color: #00b7ff85;
+    --dark-bg-color: #01003a;
 }
 
 html, body {
@@ -114,7 +114,7 @@ section {
     display: grid;
     grid-template-columns: repeat(20,1fr);
     grid-template-rows: repeat(20,1fr);
-    background: #ffffff;
+    background: var(--bg-color);
     filter: saturate(2);
     overflow: hidden;
 }
@@ -125,7 +125,7 @@ section {
     transition: 2s ease;
     position: relative;
     margin: 2px;
-    background: #ffffff;
+    background: var(--bg-color);
 }
 
 .colorBox:hover{
@@ -228,7 +228,7 @@ section {
     height: auto;
     width: 80%;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: row; 
     align-items: center; 
@@ -352,6 +352,7 @@ section {
     padding: 40px 0;
     text-align: center;
     height: auto;
+    background: var(--bg-color);
 }
 
 .projects h1 {
@@ -458,7 +459,7 @@ section {
     flex-wrap: wrap;
     padding: 60px 20px; 
     position: relative;
-    /* background-color: #e2b4ef; */
+    background-color: var(--bg-color);
 }
 
 
