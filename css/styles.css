@@ -189,6 +189,32 @@ section {
     color: #0088ff;
 }
 
+.blue-text {
+    font-size: 45px;
+    font-family: "Ranchers", sans-serif;
+    color: #0088ff; 
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  */
+}
+
+.gradient-text {
+    font-family: "Ribeye", serif;
+    font-size: 55px;
+    background: linear-gradient(135deg, #0084ff, #7700ff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(234, 0, 255, 0.3); 
+}
+
+.gradient-text:hover {
+    background: linear-gradient(135deg, #7700ff, #ff00e6); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
 /* about */
 #about{
     background: rgb(0, 162, 255); 
@@ -273,9 +299,11 @@ section {
     color: #ffffff;
     margin-top: 50px;
     margin-bottom: 40px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgb(0, 102, 255); 
+
 }
 
 .skills-container {
@@ -579,6 +607,23 @@ section {
 .footer-column {
     flex: 1; 
     padding: 0 15px; 
+    text-align: left; 
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+    text-decoration: none; 
+}
+
+.social-icon:hover {
+    color: #002d5e;
 }
 
 .footer-column:nth-child(1) {
