@@ -28,14 +28,14 @@ for(let i = 0; i < numberofColorBoxes; i++){
     bgAnimation.append(colorBox)
 }
 
-// home background animation
-const typed= new Typed('.multiple-text', {
-    strings: ['Data Analyst', 'Python Developer'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-})
+// home text typing animation
+// const typed= new Typed('.multiple-text', {
+//     strings: ['Data Analyst', 'Python Developer'],
+//     typeSpeed: 100,
+//     backSpeed: 100,
+//     backDelay: 1000,
+//     loop: true
+// })
 
 
 // responssive nav bar 
