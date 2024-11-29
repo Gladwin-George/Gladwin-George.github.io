@@ -4,7 +4,7 @@
 <h3 align="center">A passionate developer from India</h3>
 <img align="right" alt="Coding" width="400" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjUyMTdhNmI1NjNlMGI1YjJmZjU0MzgwN2RlMzNkY2Q5MDRjZWM2MiZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif">
 
-I'm a passionate engineering student currently pursuing my Bachelor's degree in Artificial Intelligence and Machine Learning.
+I'm a passionate data enthusiast on a journey to understand data, Artificial Intelligence, and Machine Learning to make wonders.
 
 My journey involves exploring the fascinating world of AI, from theoretical concepts to practical applications.
 
