@@ -742,6 +742,31 @@ section {
     font-size: 14px;
 }
 
+#go-up-btn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    font-size: 18px;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: var(--primary-text-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#go-up-btn:hover {
+    background: linear-gradient(135deg, #00d4ff, #f700ff);
+    transform: scale(1.1);
+}
+
 /* responsive */
 @media screen and (max-width: 479px){
 
@@ -749,9 +774,9 @@ section {
         height: auto;
     }
 
-    #patents{
+    /* #patents{
         background: #9c0000;
-    }
+    } */
 
     .patents-txt h1{
         font-size: 40px;
