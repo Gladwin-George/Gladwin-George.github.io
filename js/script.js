@@ -28,15 +28,18 @@ for(let i = 0; i < numberofColorBoxes; i++){
     bgAnimation.append(colorBox)
 }
 
-// home text typing animation
-// const typed= new Typed('.multiple-text', {
-//     strings: ['Data Analyst', 'Python Developer'],
-//     typeSpeed: 100,
-//     backSpeed: 100,
-//     backDelay: 1000,
-//     loop: true
-// })
-
+//darkmode
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    const icon = document.getElementById('dark-mode-icon');
+    if (document.body.classList.contains('dark-mode')) {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    } else {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+  });
 
 // responssive nav bar 
 // Function to toggle the navbar and icons
@@ -84,6 +87,14 @@ document.addEventListener('click', function(event) {
     }
 });
 
+// home text typing animation
+// const typed= new Typed('.multiple-text', {
+//     strings: ['Data Analyst', 'Python Developer'],
+//     typeSpeed: 100,
+//     backSpeed: 100,
+//     backDelay: 1000,
+//     loop: true
+// })
 
 
 

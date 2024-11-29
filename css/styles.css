@@ -8,6 +8,31 @@
     --primary-color: #007BFF;
     --bg-color: #ffffff;
     --dark-bg-color: #01003a;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #000000;
+
+    --blue-background: rgb(0, 162, 255);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --primary-color: #004aeb;
+    --bg-color: #01003a;
+    --primary-text-color: #000000;
+    --secondary-text-color: #ffffff;
+
+    --blue-background: #090088;
+
+}
+
+body.dark-mode {
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+}
+
+body.dark-mode nav {
+    background: var(--primary-color);
+    color: var(--primary-text-color);
 }
 
 html, body {
@@ -39,7 +64,7 @@ nav {
 }
 
 .nav-logo {
-    color: #ffffff;
+    color:white;
     font-size: 24px;
     text-decoration: none;
     margin-left: 10px;
@@ -59,7 +84,8 @@ nav {
 .nav-link {
     font-size: large;
     text-decoration: none;
-    color: #ffffff;
+    /* color: var(--primary-text-color); */
+    color: white;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -75,7 +101,7 @@ nav a.nav-link::after {
     left: 0;
     width: 0;
     height: 2px; 
-    background-color: #ffffff; 
+    background-color: var(--primary-text-color); 
     transition: width 0.3s ease; 
 }
 
@@ -89,6 +115,27 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
     font-size: 30px;
     margin-right: 10px;
 
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#dark-mode-icon {
+font-size: 18px; 
+color: #ffffff; 
+transition: color 0.3s ease; 
+}
+
+#dark-mode-icon:hover {
+color: #000a91; 
+}
+
+.dark-mode #dark-mode-icon {
+color: #000000; 
 }
 
 /* sections */
@@ -166,7 +213,7 @@ section {
 }
 
 #home {
-    color: #000;
+    color: var(--secondary-text-color);
     display: flex;
     flex-direction: column; 
     justify-content: center; 
@@ -217,7 +264,8 @@ section {
 
 /* about */
 #about{
-    background: rgb(0, 162, 255); 
+    /* background: rgb(0, 162, 255);  */
+    background: var(--blue-background); 
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -258,6 +306,7 @@ section {
 }
 
 .aboutme-text p {
+    color: var(--secondary-text-color);
     font-size: 1.2rem;
     padding: 0px;
     padding-bottom: 20px; 
@@ -288,9 +337,10 @@ section {
 
 /* SKILLS */
 .skills {
-    height: auto;
+    height: auto; 
     padding: 60px 20px;
-    background: linear-gradient(to bottom, rgba(0, 162, 255, 1) 0%, rgba(0, 162, 255, 0) 100%); 
+    /* background: linear-gradient(to bottom, rgb(66, 0, 248) 0%, rgba(0, 162, 255, 0) 100%);  */
+    background: linear-gradient(to bottom,var(--blue-background) 0%, rgba(0, 162, 255, 0) 100%); 
     text-align: center;
 }
 
@@ -342,7 +392,7 @@ section {
 
 .skill p {
     font-size: 1em;
-    color: #333;
+    color: var(--secondary-text-color);
     margin: 0;
 }
 
@@ -477,7 +527,7 @@ section {
 
 .patents-txt h2{
     font-size: 80px;
-    
+    color: var(--secondary-text-color);
 }
 
 .patent-card1{
@@ -591,8 +641,8 @@ section {
 
 /* footer */
 #footer {
-    background-color: #007BFF; 
-    color: #ffffff; 
+    background-color: var(--primary-color); 
+    color: var(--primary-text-color); 
     padding: 20px 20px 10px 20px; 
     font-family: 'Arial', sans-serif; 
     overflow: hidden;
@@ -617,7 +667,7 @@ section {
 
 .social-icon {
     margin: 0 10px;
-    color: #ffffff;
+    color: var(--primary-text-color);
     font-size: 1.5em;
     transition: color 0.3s ease;
     text-decoration: none; 
@@ -632,7 +682,7 @@ section {
 }
 
 .footer-column:nth-child(2), .footer-column:nth-child(3) {
-    border-left: 2px solid #ffffff;
+    border-left: 2px solid var(--primary-text-color);
     flex: 1 1 10%; 
 }
 
@@ -665,7 +715,7 @@ section {
 }
 
 .footer-column ul li a {
-    color: #ffffff;
+    color: var(--primary-text-color);
     text-decoration: none;
     font-size: 16px;
     font-weight: normal;
