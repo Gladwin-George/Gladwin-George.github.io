@@ -819,6 +819,7 @@ section {
     .nav-toggle {
         display: block;
         position: absolute;
+        font-size: 35px;
         right: 10px;
         top: 50%;
         transform: translateY(-50%);
