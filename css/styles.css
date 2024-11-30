@@ -118,11 +118,15 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
 #dark-mode-container {
     display: flex;
     align-items: center;
+    justify-content: center; 
     margin-left: 10px;
     margin-right: 20px;
 }
 
 #dark-mode-toggle {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     background: none;
     border: none;
     cursor: pointer;
@@ -130,7 +134,7 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
 }
 
 #dark-mode-icon {
-    font-size: 18px;
+    font-size: 25px;
     color: #ffffff;
     transition: color 0.3s ease;
 }
