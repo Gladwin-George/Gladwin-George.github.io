@@ -320,13 +320,13 @@ section {
     color: var(--secondary-text-color);
     font-size: 1.2rem;
     padding: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077ff;
+    padding: 10px 15px 10px 15px;
+    background-color: #006eff;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -334,23 +334,20 @@ section {
     transition: background-color 0.3s;
     will-change: transform;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: auto;
+    margin: 10px 10px 10px 0px;
 }
 
 .btn:hover {
-    background-color: #0026ff;
+    background-color: #00a2ff;
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgb(0, 195, 255);
-}
-
-.btn, .side-btn{
-    margin: 10px 10px 10px 0px;
+    box-shadow: 0 4px 4px rgb(140, 0, 255);
 }
 
 /* SKILLS */
 .skills {
     height: auto;
     padding: 60px 20px;
-    /* background: linear-gradient(to bottom, rgb(66, 0, 248) 0%, rgba(0, 162, 255, 0) 100%);  */
     background: linear-gradient(to bottom,var(--blue-background) 0%, rgba(0, 162, 255, 0) 100%);
     text-align: center;
 }
@@ -505,7 +502,7 @@ section {
 }
 
 .project-item .btn:hover {
-    background-color: #9d00ff;
+    background-color: #3a01a5;
 }
 
 /* patents */
