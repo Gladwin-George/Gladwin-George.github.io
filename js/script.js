@@ -141,6 +141,12 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         var messageElement = document.getElementById('alert-message');
         messageElement.textContent = 'Please fill in all fields.';
         messageElement.className = 'error';
+
+        setTimeout(function() {
+            messageElement.textContent = '';
+            messageElement.className = '';
+        }, 4000);
+
         return;
     }
 
@@ -159,5 +165,10 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             var messageElement = document.getElementById('alert-message');
             messageElement.textContent = 'Failed to send email. Error: ' + JSON.stringify(error);
             messageElement.className = 'error';
+
+            setTimeout(function() {
+                messageElement.textContent = '';
+                messageElement.className = '';
+            }, 4000);
         });
 });

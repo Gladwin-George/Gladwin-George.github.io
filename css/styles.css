@@ -931,6 +931,18 @@ body.dark-mode .social-contact a:hover {
 
 @media screen and (max-width: 536px){
 
+    .contact-card {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        order: 1;
+    }
+
+    .contact-form {
+        order: 2;
+    }
+
     .patents-txt h1{
         padding-right: 30px;
     }
