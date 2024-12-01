@@ -119,3 +119,45 @@ goUpBtn.onclick = function() {
     document.documentElement.scrollTop = 0;
 };
 
+
+//email js
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var form = this;
+    var inputs = form.querySelectorAll('input, textarea');
+    var allFilled = true;
+
+    inputs.forEach(function(input) {
+        if (!input.value) {
+            allFilled = false;
+            input.classList.add('error'); // Optionally add a class to highlight empty fields
+        } else {
+            input.classList.remove('error');
+        }
+    });
+
+    if (!allFilled) {
+        var messageElement = document.getElementById('alert-message');
+        messageElement.textContent = 'Please fill in all fields.';
+        messageElement.className = 'error';
+        return;
+    }
+
+    emailjs.sendForm('service_rgjez63', 'template_1vsvbal', form)
+        .then(function() {
+            var messageElement = document.getElementById('alert-message');
+            messageElement.textContent = 'Email sent successfully!';
+            messageElement.className = 'success';
+            form.reset(); 
+
+            setTimeout(function() {
+                messageElement.textContent = '';
+                messageElement.className = '';
+            }, 4000);
+        }, function(error) {
+            var messageElement = document.getElementById('alert-message');
+            messageElement.textContent = 'Failed to send email. Error: ' + JSON.stringify(error);
+            messageElement.className = 'error';
+        });
+});
