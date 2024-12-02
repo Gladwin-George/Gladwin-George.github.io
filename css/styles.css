@@ -6,6 +6,8 @@
 
 :root{
     --primary-color: #007BFF;
+    --primary-color-gradient: linear-gradient(135deg, hsl(207, 100%, 50%), #003cff);
+
     --bg-color: #ffffff;
     --dark-bg-color: #01003a;
     --primary-text-color: #ffffff;
@@ -50,7 +52,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: var(--primary-color);
+    background: var(--primary-color-gradient);
     color: white;
     font-weight: bold;
     font-size: medium;
@@ -115,6 +117,7 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
     display: none;
     cursor: pointer;
     font-size: 30px;
+    padding: 0%;
     margin-right: 10px;
 }
 
@@ -140,6 +143,12 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
     font-size: 25px;
     color: #ffffff;
     transition: color 0.3s ease;
+}
+
+#dark-mode-icon.fas.fa-sun,
+#dark-mode-icon.fas.fa-moon{
+    margin: 0; 
+    padding: 0; 
 }
 
 #dark-mode-icon:hover {
@@ -280,6 +289,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 100px;
     /* height: 100%;  */
 }
 
@@ -339,7 +349,7 @@ section {
 }
 
 .btn:hover {
-    background-color: #00a2ff;
+    background: linear-gradient(135deg, #0056b3, #aa00ff);
     transform: scale(1.05);
     box-shadow: 0 4px 4px rgb(140, 0, 255);
 }
@@ -425,7 +435,7 @@ section {
     position: relative;
     display: inline-block;
     font-weight:bolder;
-    text-shadow: 2px 2px 1px rgba(230, 0, 255, 0.1);
+    text-shadow: 2px 2px 1px rgba(17, 0, 255, 0.1);
 }
 
 .heading:hover{
@@ -640,7 +650,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 0 100px 0;
     height: auto;
 }
 
@@ -667,7 +677,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(135deg, hsl(202, 100%, 50%), #f200ff);
+  background: linear-gradient(135deg, hsl(212, 100%, 50%), #f200ffa2);
 }
 
 .contact-info h3 {
@@ -689,11 +699,13 @@ section {
 }
 
 .contact-form {
-  flex: 1;
-  padding: 20px;
-  background: rgb(255, 255, 255);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--blue-background);
+    flex: 1;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent; 
+    border-image: linear-gradient(135deg, #0056b3, #aa00ff) 1;
+    border-left: none;
 }
 
 body.dark-mode .contact-form{
@@ -740,7 +752,15 @@ body.dark-mode .contact-form textarea {
 }
 
 .contact-form button:hover {
-  background-color: #0056b3;
+  background-color: #0026ff;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid transparent; 
+    background-clip: padding-box;
+    border-image: linear-gradient(135deg, #0056b3, #aa00ff) 1;
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 .social-contact {
@@ -787,7 +807,7 @@ body.dark-mode .social-contact a:hover {
 
 /* footer */
 #footer {
-    background-color: var(--primary-color);
+    background: var(--primary-color-gradient);
     color: var(--primary-text-color);
     padding: 20px 20px 10px 20px;
     font-family: 'Arial', sans-serif;
@@ -939,6 +959,9 @@ body.dark-mode .social-contact a:hover {
 
     .contact-form {
         order: 2;
+        border-image: linear-gradient(135deg, #0056b3, #aa00ff) 1;
+        border-left: 2px solid #0056b3;
+        border-top: none;
     }
 
     .patents-txt h1{
