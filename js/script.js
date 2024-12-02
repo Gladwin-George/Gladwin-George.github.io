@@ -172,3 +172,30 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             }, 4000);
         });
 });
+
+//filter button
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-image2-container');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to the clicked button
+            button.classList.add('active');
+
+            // Filter projects based on category
+            projects.forEach(project => {
+                if (category === 'all' || project.getAttribute('data-category') === category) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
+});
