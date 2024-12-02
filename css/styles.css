@@ -113,12 +113,22 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
     width: 100%;
 }
 
+#nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
 .nav-toggle, .nav-close {
     display: none;
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 30px;
-    padding: 0%;
-    margin-right: 10px;
+    margin: 0 5px;
 }
 
 #dark-mode-container {
@@ -981,14 +991,17 @@ body.dark-mode .social-contact a:hover {
 
 @media screen and (max-width: 768px) {
 
-    .nav-toggle {
-        display: block;
+    .nav-toggle, .nav-close {
         position: absolute;
         font-size: 35px;
         right: 10px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 1000;
+    }
+
+    .nav-toggle{
+        display: block;
     }
 
     .nav-close.active {
