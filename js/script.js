@@ -199,3 +199,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Popup functionality
+document.querySelectorAll('.patent-info-btn').forEach((button, index) => {
+    button.addEventListener('click', function() {
+        const popup = document.getElementById(`popup${index + 1}`);
+        const overlay = document.getElementById('overlay1');
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+    });
+});
+
+document.querySelectorAll('.popup-close').forEach(closeButton => {
+    closeButton.addEventListener('click', function() {
+        const popup = this.closest('.popup');
+        const overlay = document.getElementById('overlay1');
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+});
+
+document.getElementById('overlay1').addEventListener('click', function() {
+    document.querySelectorAll('.popup').forEach(popup => {
+        popup.style.display = 'none';
+    });
+    this.style.display = 'none';
+});
