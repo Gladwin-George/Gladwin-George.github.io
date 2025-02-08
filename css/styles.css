@@ -340,13 +340,12 @@ section {
 .aboutme-text p {
     color: var(--secondary-text-color);
     font-size: 1.2rem;
-    padding: 0px;
-    padding-bottom: 10px;
+    padding: 0px 10px 10px 0px;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 15px 13px 15px;
     background-color: #006eff;
     color: white;
     text-decoration: none;
@@ -356,7 +355,7 @@ section {
     will-change: transform;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: auto;
-    margin: 10px 10px 10px 0px;
+    text-align: center;
 }
 
 .btn:hover {
@@ -1210,10 +1209,6 @@ body.dark-mode .social-contact a:hover {
         border-top: none;
     }
 
-    .patents-txt h1{
-        padding-right: 30px;
-    }
-
     .patents-txt h2{
         font-size: 40px;
     }
@@ -1290,36 +1285,17 @@ body.dark-mode .social-contact a:hover {
         font-size: 1.5rem;
     }
 
-    #about {
-        height: auto;
-    }
-
-    .aboutme {
-        flex-direction: column;
-        height: auto;
-        width: 90%;
-    }
-
     .aboutme-image {
-        width: 60%;
+        width: 300px;
         margin-bottom: 20px;
     }
 
-    .aboutme-text{
-        padding-bottom: 50px;
+    .aboutme-text p{
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px 10px 0px;
     }
-
-    .btn {
-        margin-bottom: 10px;
-    }
-
-    .side-btn{
-        margin: 0px;
-    }
-
-    /* #patents{
-        height: auto;
-    } */
 
     #dark-mode-container {
         position: absolute;
@@ -1353,6 +1329,30 @@ body.dark-mode .social-contact a:hover {
     #patents{
         height: auto;
     }
+
+    .aboutme-text {
+        width: 80%;
+    }
+
+    #about {
+        height: auto;
+    }
+
+    .aboutme {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        padding: 0;
+    }
+
+    .aboutme-image {
+        margin-bottom: 20px;
+    }
+
+    .aboutme-text{
+        padding-bottom: 50px;
+    }
+
 
 }
 
