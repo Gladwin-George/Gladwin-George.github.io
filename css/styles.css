@@ -652,20 +652,17 @@ section {
     background-color: var(--bg-color);
 }
 
-.patents-txt h1, h2{
-    padding-left: 30px;
-}
-
 .patents-txt h1{
     font-size: 100px;
     color: #0077ff;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
-
+    padding-left: 30px;
 }
 
 .patents-txt h2{
     font-size: 80px;
+    padding-left: 30px;
     color: var(--secondary-text-color);
 }
 
@@ -1139,13 +1136,13 @@ body.dark-mode .social-contact a:hover {
 
 /* go up button */
 #go-up-btn {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 99;
-    width: 50px; /* Set width */
-    height: 50px; /* Set height */
+    width: 50px; 
+    height: 50px; 
     font-size: 18px;
     background: linear-gradient(135deg, #007bff, #00d4ff);
     color: var(--primary-text-color);
