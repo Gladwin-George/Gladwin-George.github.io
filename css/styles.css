@@ -64,7 +64,7 @@ nav {
     height: 60px;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    padding: 0px 10px 0px 10px;
+    padding: 0px 2px 0px 10px;
 }
 
 .nav-logo {
@@ -137,7 +137,6 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
     align-items: center;
     justify-content: center; 
     margin-left: 10px;
-    margin-right: 20px;
 }
 
 #dark-mode-toggle {
@@ -263,34 +262,24 @@ section {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.info span{
-    color: #0088ff;
-}
-
 .blue-text {
     font-size: 45px;
     font-family: "Ranchers", sans-serif;
-    color: #0088ff;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  */
+    font-weight: bolder;
+    color: rgb(0, 89, 255);
 }
 
-.gradient-text {
-    font-family: "Ribeye", serif;
-    font-size: 55px;
-    background: linear-gradient(135deg, #0084ff, #7700ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 4px rgba(234, 0, 255, 0.3);
+.highlight-text {
+    background-color: rgb(0, 17, 255); 
+    color: #fafafa;
+    padding: 0 8px;  
+    font-weight: bold; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-.gradient-text:hover {
-    background: linear-gradient(135deg, #7700ff, #ff00e6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+.highlight-text:hover {
+    background-color: rgb(0, 247, 255); 
+    color: rgb(4, 0, 255); 
 }
 
 /* about */
@@ -462,9 +451,11 @@ section {
 }
 
 .project-item {
+    display: flex;
+    flex-direction: column;
     width: 100px;
-    height: auto;
-    background: linear-gradient(135deg, hsl(202, 100%, 50%), #6200ff77);
+    height: 510px;
+    background: linear-gradient(135deg, hsl(202, 100%, 50%), #002fffa8);
     border-radius: 8px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     margin: 20px;
@@ -500,32 +491,58 @@ section {
     margin: 10px 0;
 }
 
-.project-skills-btn{
+.project-skills-btn,
+.project-skills-btn2{
     display: inline-block;
     margin: 5px 5px 0 0;
     padding: 5px 10px;
-    background:  #0084ff;
-    background:  var(--primary-color-gradient);
-    color: #fff;
+    background:  #0044ff;
+    color: #ffffff;
     font-weight: bold;
     border-radius: 4px;
     font-size: 14px;
-    border: 2.5px solid var(--dark-bg-color);
+    border: 2.5px solid #7bd5ff;
+    text-align: center;
 }
 
-.project-item .btn {
+.project-item .button-container,
+.project-image2-container .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    gap: 20px;
+}
+
+.github_btn {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 4px;
+    transition: transform 0.3s ease; 
+}
+
+.github_btn:hover {
+    color: #000000;
+    transform: scale(1.2); 
+}
+
+.learn-more-btn {
     display: inline-block;
-    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8400ff, #1900ff);
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    border: 2.5px solid #7bd5ff;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-item .btn:hover {
-    background-color: #3a01a5;
+.learn-more-btn:hover {
+    background: linear-gradient(135deg, #0400ff, #f700ff);
+    transform: scale(1.05);
 }
 
 .heading2{
@@ -570,8 +587,8 @@ section {
 
 .project-image2-container {
     position: relative;
-    width: 350px; 
-    height: 250px; 
+    width: 450px; 
+    height: 350px; 
     margin: 10px; 
     overflow: hidden;
     border: 2px solid var(--dark-blue-color);
@@ -602,7 +619,6 @@ section {
     background: rgba(0, 26, 159, 0.8);
     background: linear-gradient(135deg, hsl(212, 100%, 50%), #f200ffa2);
     color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -627,17 +643,6 @@ section {
     object-position: center;
 }
 
-.project-skills-btn2{
-    display: inline-block;
-    margin: 5px 5px 0 0;
-    padding: 5px 10px;
-    background: linear-gradient(135deg, #00aeff, #001aff);
-    color: #fff;
-    border-radius: 4px;
-    font-size: 14px;
-    border: 1px solid #ffffff;
-}
-
 /* patents */
 #patents{
     width: 100%;
@@ -646,7 +651,7 @@ section {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 60px 20px;
+    padding: 110px 20px 50px 20px;
     position: relative;
     background-color: var(--bg-color);
 }
@@ -752,15 +757,11 @@ section {
     right: 50px;
 }
 
-/* .coverback{
+.coverback{
     background: #e60000;
     border-radius: 10px 0px 0px 10px;
     transform:rotateY(180deg);
-} */
-
-/* .card1{
-    margin-bottom: 80px;
-} */
+}
 
 .card2{
     margin-top: 80px;
@@ -919,7 +920,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(135deg, hsl(212, 100%, 50%), #f200ffa2);
+  background: linear-gradient(135deg, hsl(204, 100%, 50%), #7700ffd8);
 }
 
 .contact-info h3 {
@@ -1155,7 +1156,7 @@ body.dark-mode .social-contact a:hover {
 }
 
 #go-up-btn:hover {
-    background: linear-gradient(135deg, #00d4ff, #f700ff);
+    background: linear-gradient(135deg, #00aeff, #007bff);
     transform: scale(1.1);
 }
 
@@ -1299,7 +1300,7 @@ body.dark-mode .social-contact a:hover {
 
     #dark-mode-container {
         position: absolute;
-        right: 60px;
+        right: 80px;
     }
 
     #dark-mode-icon {
@@ -1321,6 +1322,11 @@ body.dark-mode .social-contact a:hover {
 
     .popup-text {
         order: 1;
+    }
+
+    /* footer */
+    .footer-column h1 {
+        font-size: 30px;
     }
 
 }
@@ -1390,10 +1396,6 @@ body.dark-mode .social-contact a:hover {
 
     .blue-text{
         font-size: 30px;
-    }
-
-    .gradient-text{
-        font-size: 40px;
     }
 
     .patent-info{
