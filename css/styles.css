@@ -506,7 +506,7 @@ section {
 }
 
 .project-item .button-container,
-.project-image2-container .button-container {
+.other-projects-container .button-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -585,10 +585,10 @@ section {
     gap: 10px; 
 }
 
-.project-image2-container {
+.other-projects-container {
     position: relative;
-    width: 450px; 
-    height: 350px; 
+    width: 400px; 
+    height: 300px; 
     margin: 10px; 
     overflow: hidden;
     border: 2px solid var(--dark-blue-color);
@@ -631,7 +631,7 @@ section {
     box-sizing: border-box;
 }
 
-.project-image2-container:hover .project-details {
+.other-projects-container:hover .project-details {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1429,3 +1429,8 @@ body.dark-mode .social-contact a:hover {
         padding: 20px 110px 40px 40px;
     }
 } */
+
+
+/* next thing to correct */
+/*1.  other projects column and row arrangement */
+/*2.  patents in two rows */
