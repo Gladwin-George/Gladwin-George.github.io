@@ -414,7 +414,7 @@ section {
 
 /* projects */
 #projects {
-    padding: 40px 60px;
+    padding: 40px 0px;
     text-align: center;
     height: auto;
     background: var(--bg-color);
@@ -453,14 +453,13 @@ section {
 .project-item {
     display: flex;
     flex-direction: column;
-    width: 100px;
-    height: 510px;
+    width: 400px;
+    height: 550px;
     background: linear-gradient(135deg, hsl(202, 100%, 50%), #002fffa8);
     border-radius: 8px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     margin: 20px;
     padding: 20px;
-    width: 350px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background 0.3s ease;
 }
@@ -476,6 +475,12 @@ section {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease; 
+}
+
+.project-item:hover .project-image {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
 }
 
 .project-item h3 {
@@ -688,7 +693,6 @@ section {
 }
 
 .cover{
-    /* display: none; */
     position:absolute;
     top:0px;
     left:0px;
@@ -758,7 +762,7 @@ section {
 }
 
 .coverback{
-    background: #e60000;
+    background: #ffffff;
     border-radius: 10px 0px 0px 10px;
     transform:rotateY(180deg);
 }
