@@ -87,15 +87,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// home text typing animation
-// const typed= new Typed('.multiple-text', {
-//     strings: ['Data Analyst', 'Python Developer'],
-//     typeSpeed: 100,
-//     backSpeed: 100,
-//     backDelay: 1000,
-//     loop: true
-// })
-
 //up button
 // Get the button
 var goUpBtn = document.getElementById("go-up-btn");
@@ -176,7 +167,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 //filter button
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const projects = document.querySelectorAll('.project-image2-container');
+    const projects = document.querySelectorAll('.other-projects-container');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
