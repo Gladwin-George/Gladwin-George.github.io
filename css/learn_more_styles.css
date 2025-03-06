@@ -22,7 +22,7 @@
 
 .specific-heading {
     text-align: center; 
-    background: #0066ff;
+    background: linear-gradient(135deg, #8400ff, #1900ff);
     padding: 10px;
     color: #ffffff !important; 
 }
