@@ -12,10 +12,12 @@
     --dark-bg-color: #0300ca;
     --primary-text-color: #ffffff;
     --secondary-text-color: #000000;
+    --third-text-color: #000000;
 
     --blue-background: rgb(0, 162, 255);
     --dark-blue-color: #000b70;
 
+    --learn-more-content-color: #ffffff;
 }
 
 /* Dark mode styles */
@@ -25,9 +27,12 @@ body.dark-mode {
     --dark-bg-color: #00b7ff;
     --primary-text-color: #000000;
     --secondary-text-color: #ffffff;
+    --third-text-color: #007bff;
 
     --blue-background: #090088;
     --dark-blue-color: #ffffff;
+
+    --learn-more-content-color: #000727;
 }
 
 body.dark-mode {
@@ -72,6 +77,10 @@ nav {
     font-size: 24px;
     text-decoration: none;
     margin-left: 10px;
+}
+
+.nav-logo:hover {
+    color: #000b70;
 }
 
 .nav-menu {
@@ -284,7 +293,6 @@ section {
 
 /* about */
 #about{
-    /* background: rgb(0, 162, 255);  */
     background: var(--blue-background);
     display: flex;
     align-items: center;
@@ -543,6 +551,11 @@ section {
     text-decoration: none;
     border: 2.5px solid #7bd5ff;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learn-more-btn2{
+    margin-top: 10px;
+    padding: 5px 10px;
 }
 
 .learn-more-btn:hover {
@@ -1082,6 +1095,7 @@ body.dark-mode .social-contact a:hover {
 }
 
 #go-up-btn:hover {
+    color: var(--secondary-text-color);
     background: linear-gradient(135deg, #00aeff, #007bff);
     transform: scale(1.1);
 }
@@ -1093,16 +1107,29 @@ body.dark-mode .social-contact a:hover {
         height: auto;
     }
 
-    /* #patents{
-        background: #9c0000;
-    } */
+    .patents-txt{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .patents-txt h1,
+    .patents-txt h2{
+        padding-left: 0px;
+    }
 
     .patents-txt h1{
-        font-size: 45px;
+        font-size: 85px;
     }
 
     .patents-txt h2{
         font-size: 35px;
+        text-align: center;
+    }
+
+    .card1, .card2{
+        margin-left: auto ;
+        margin-right: auto;
+
     }
 
     .coverfront {
@@ -1282,7 +1309,8 @@ body.dark-mode .social-contact a:hover {
     width: 12px;
 }
 
-@media screen and (max-width: 350px) {
+
+@media screen and (max-width: 390px) {
 
     .nav-logo, .cover{
         display: none;
@@ -1300,6 +1328,19 @@ body.dark-mode .social-contact a:hover {
         font-size: 30px;
     }
 
+    .project-item{
+        height: auto;
+    }
+
+    .patents-txt h1{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .card1, .card2{
+        border: 2px solid #000000;
+    }
+
     .patent-info{
         padding:05px;
     }
@@ -1308,26 +1349,20 @@ body.dark-mode .social-contact a:hover {
         font-size: 40px;
     }
 
-    /* no problem till 280px width */
 }
 
-/* @media screen and (max-width: 360px){
-    #patents{
-        background: #009c15;
+@media screen and (max-width: 295px) {
+
+    .aboutme-image {
+        width: 150px;
+        margin-top: 10px;
     }
 
-    .coverfront p {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 340px){
-    #patents{
-        background: #9c0094;
+    .patents-txt h2{
+        font-size: 30px;
     }
 
-    .coverfront p {
-        font-size: 13px;
-        padding: 20px 110px 40px 40px;
+    .footer-column:nth-child(3){
+        display: none;
     }
-} */
+} 
