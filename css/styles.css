@@ -1038,7 +1038,10 @@ body.dark-mode .social-contact a:hover {
     margin: 16px;
     font-size: 50px;
     margin-bottom: 20px;
+}
 
+.footer-column h1:hover{
+    color: var(--dark-blue-color);
 }
 
 .footer-column h3 {
