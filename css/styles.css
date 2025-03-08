@@ -431,6 +431,39 @@ section {
     margin: 0;
 }
 
+/* skills icon slide in and shrink on scroll animation*/
+.skill {
+    opacity: 0;
+}
+
+.skill.visible {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.skill:nth-child(1).visible { animation-delay: 0.1s; }
+.skill:nth-child(2).visible { animation-delay: 0.2s; }
+.skill:nth-child(3).visible { animation-delay: 0.3s; }
+.skill:nth-child(4).visible { animation-delay: 0.4s; }
+.skill:nth-child(5).visible { animation-delay: 0.5s; }
+.skill:nth-child(6).visible { animation-delay: 0.6s; }
+.skill:nth-child(7).visible { animation-delay: 0.7s; }
+.skill:nth-child(8).visible { animation-delay: 0.8s; }
+
+.skill.hidden {
+    animation: shrinkOut 0.6s ease-out forwards;
+}
+
 /* projects */
 #projects {
     padding: 20px 0px 40px 0px;
@@ -574,6 +607,23 @@ section {
     transform: scale(1.05);
 }
 
+/* featured projects on scroll animation */
+.project-item {
+    opacity: 0;
+}
+
+.project-item.visible {
+    animation: shrinkIn 0.6s ease-out forwards;
+}
+
+.project-item:nth-child(1).visible { animation-delay: 0.1s; }
+.project-item:nth-child(2).visible { animation-delay: 0.3s; }
+.project-item:nth-child(3).visible { animation-delay: 0.5s; }
+
+.project-item.hidden {
+    animation: shrinkOut 0.6s ease-out forwards;
+}
+
 .heading2{
     margin: 60px 20px 20px 20px;
     font-weight: bolder;
@@ -606,6 +656,31 @@ section {
     background-color: var(--dark-bg-color);
 
 }
+
+/* projects filter button on scroll animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filter-btn {
+    opacity: 0;
+}
+
+.filter-btn.visible {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.filter-btn:nth-child(1).visible { animation-delay: 0.1s; }
+.filter-btn:nth-child(2).visible { animation-delay: 0.3s; }
+.filter-btn:nth-child(3).visible { animation-delay: 0.5s; }
+.filter-btn:nth-child(4).visible { animation-delay: 0.7s; }
 
 .project-list2 {
     display: flex;
@@ -1402,3 +1477,96 @@ body.dark-mode .social-contact a:hover {
         display: none;
     }
 } 
+
+/* on scroll animations */
+
+/* slide in from top */
+.slide-in-top {
+    opacity: 0;
+}
+
+.slide-in-top.visible {
+    animation: slideInTop 0.6s ease-out forwards;
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* slide in from right to go out from left */
+.slide-in-right {
+    opacity: 0;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right.visible {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+@keyframes slideOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.slide-in-right.hidden {
+    animation: slideOutLeft 0.6s ease-out forwards;
+}
+
+/* shrink in and out animation */
+.shrinkInAndOut {
+    opacity: 0;
+}
+
+.shrinkInAndOut.visible{
+    animation: shrinkIn 0.6s ease-out forwards;
+}
+
+.shrinkInAndOut.hidden{
+    animation: shrinkOut 0.6s ease-out forwards;
+}
+
+@keyframes shrinkIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shrinkOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+

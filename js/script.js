@@ -1,3 +1,5 @@
+
+
 //navbar scroll
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.nav-link');
@@ -191,3 +193,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// On-scroll animation
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.fade-in, .slide-in-top, .slide-in-right, .skill, .shrinkInAndOut, .project-item, .filter-btn');
+
+    function checkVisibility() {
+        const windowHeight = window.innerHeight;
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+
+            if (elementTop < windowHeight - 100 && elementBottom > 100) {
+                element.classList.add('visible');
+                element.classList.remove('hidden');
+            } else {
+                element.classList.remove('visible');
+                element.classList.add('hidden');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check
+});
