@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // On-scroll animation
 document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.fade-in, .slide-in-top, .slide-in-right, .skill, .shrinkInAndOut, .project-item, .filter-btn');
+    const elements = document.querySelectorAll('.fade-in, .slide-in-top, .slide-in-right, .skill, .shrinkInAndOut, .project-item, .filter-btn, .slide-in-left, .patent-card1');
 
     function checkVisibility() {
         const windowHeight = window.innerHeight;
