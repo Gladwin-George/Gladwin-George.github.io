@@ -1221,12 +1221,22 @@ body.dark-mode .social-contact a:hover {
     border-radius: 50%; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, transform 0.3s;
+    border: var(--bg-color) solid 2px;
 }
 
 #go-up-btn:hover {
     color: var(--secondary-text-color);
     background: linear-gradient(135deg, #00aeff, #007bff);
     transform: scale(1.1);
+}
+
+/* In and Out shrink animation */
+.shrink-in {
+    animation: shrinkIn 0.3s forwards;
+}
+
+.shrink-out {
+    animation: shrinkOut 0.3s forwards;
 }
 
 /* responsive */

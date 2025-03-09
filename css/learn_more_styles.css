@@ -85,25 +85,6 @@ ol, ul {
     background-color: #002fff;
 }
 
-/* Go Up Button */
-#go-up-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-#go-up-btn:hover {
-    background-color: #555;
-}
-
 /* responsiveness */
 @media screen and (max-width: 800px) {
     .content {

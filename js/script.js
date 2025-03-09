@@ -9,14 +9,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function smoothScroll(event) {
+        const linkHref = event.currentTarget.getAttribute('href');
+
+        // If the link doesn't start with "#" (i.e., it's external or references another page),
+        // allow normal navigation (no preventDefault).
+        if (!linkHref.startsWith('#')) {
+            return;
+        }
+
+        // Otherwise, handle smooth scrolling for local links
         event.preventDefault();
-        const targetId = event.currentTarget.getAttribute('href').substring(1);
+        const targetId = linkHref.substring(1);
         const targetElement = document.getElementById(targetId);
 
-        window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: 'smooth'
-        });
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        } else {
+            console.error(`Element with ID "${targetId}" not found.`);
+        }
     }
 });
 
@@ -24,10 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
 const bgAnimation = document.getElementById('bgAnimation');
 const numberofColorBoxes = 400;
 
-for(let i = 0; i < numberofColorBoxes; i++){
-    const colorBox = document.createElement('div');
-    colorBox.classList.add('colorBox');
-    bgAnimation.append(colorBox)
+if (bgAnimation) {
+    for(let i = 0; i < numberofColorBoxes; i++){
+        const colorBox = document.createElement('div');
+        colorBox.classList.add('colorBox');
+        bgAnimation.append(colorBox);
+    }
 }
 
 //darkmode
@@ -41,9 +56,9 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function()
       icon.classList.remove('fa-moon');
       icon.classList.add('fa-sun');
     }
-  });
+});
 
-// responssive nav bar 
+// responsive nav bar 
 // Function to toggle the navbar and icons
 function toggleNavbar() {
     document.querySelector('.nav-menu').classList.toggle('active');
@@ -100,9 +115,19 @@ window.onscroll = function() {
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        goUpBtn.style.display = "block";
+        if (!goUpBtn.classList.contains('shrink-in')) {
+            goUpBtn.classList.remove('shrink-out');
+            goUpBtn.classList.add('shrink-in');
+            goUpBtn.style.display = "block";
+        }
     } else {
-        goUpBtn.style.display = "none";
+        if (goUpBtn.classList.contains('shrink-in')) {
+            goUpBtn.classList.remove('shrink-in');
+            goUpBtn.classList.add('shrink-out');
+            setTimeout(() => {
+                goUpBtn.style.display = "none";
+            }, 300); // Match the duration of the shrinkOut animation
+        }
     }
 }
 
