@@ -10,11 +10,13 @@
 
     --bg-color: #ffffff;
     --dark-bg-color: #0300ca;
+    --nav-text-color: #002ab3;
     --primary-text-color: #ffffff;
     --secondary-text-color: #000000;
     --third-text-color: #000000;
-
-    --blue-background: rgb(0, 162, 255);
+ 
+    /* --blue-background: rgb(0, 114, 245); */
+    --blue-background: rgb(59, 130, 246);
     --dark-blue-color: #000b70;
 
     --learn-more-content-color: #ffffff;
@@ -25,6 +27,8 @@ body.dark-mode {
     --primary-color: #004aeb;
     --bg-color: #01003a;
     --dark-bg-color: #00b7ff;
+    --nav-text-color: #ffffff;
+
     --primary-text-color: #000000;
     --secondary-text-color: #ffffff;
     --third-text-color: #007bff;
@@ -41,8 +45,14 @@ body.dark-mode {
 }
 
 body.dark-mode nav {
-    background: var(--primary-color);
-    color: var(--primary-text-color);
+    background: rgba(10, 20, 60, 0.36);
+    backdrop-filter: blur(48px) saturate(180%) brightness(0.85);
+    -webkit-backdrop-filter: blur(48px) saturate(180%) brightness(0.85);
+    border: 3px solid #00b7ff;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(0, 183, 255, 0.18), 0 12px 32px 0 rgba(0,0,0,0.18);
+    color: #fff;
+    transition: background 0.3s, box-shadow 0.3s, top 0.3s;
 }
 
 html, body {
@@ -57,23 +67,29 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background: var(--primary-color-gradient);
-    color: white;
+    background: rgba(255, 255, 255, 0.336);
+    backdrop-filter: blur(48px) saturate(180%) brightness(1.15);
+    -webkit-backdrop-filter: blur(48px) saturate(180%) brightness(1.15);
+    border: 2px solid #ffffff8a;
+    border-radius: 15px; 
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 12px 32px 0 rgba(0,0,0,0.10);
+    color: #00ccff;
     font-weight: bold;
     font-size: medium;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98vw;           
+    max-width: 1400px;    
     height: 60px;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     padding: 0px 2px 0px 10px;
+    transition: background 0.3s, box-shadow 0.3s, top 0.3s;
 }
 
 .nav-logo {
-    color: var(--bg-color);
+    color: var(--secondary-text-color);
     font-size: 24px;
     text-decoration: none;
     margin-left: 10px;
@@ -92,36 +108,31 @@ nav {
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 20px;
-    padding-right: 20px;
+    gap: 0;
 }
 
 .nav-link {
     font-size: large;
     text-decoration: none;
-    color: var(--bg-color);
+    color: var(--secondary-text-color);
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: 
+        color 0.3s ease,
+        background 0.3s ease,
+        padding 0.3s ease,
+        border-radius 0.3s ease;
+    padding: 5px 10px;         
+    border-radius: 10px;       
 }
 
 .nav-list > li {
     position: relative;
 }
 
-nav a.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-text-color);
-    transition: width 0.3s ease;
-}
-
-nav a.nav-link:hover::after, nav a.nav-link:focus::after {
-    width: 100%;
-}
+nav a.nav-link:hover {
+    color: white;
+    background: var(--primary-color-gradient); 
+} 
 
 #nav-container {
     display: flex;
@@ -133,7 +144,7 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
 .nav-toggle, .nav-close {
     display: none;
     background: none;
-    color: var(--bg-color);
+    color: var(--secondary-text-color);
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -160,14 +171,14 @@ nav a.nav-link:hover::after, nav a.nav-link:focus::after {
 
 #dark-mode-icon {
     font-size: 25px;
-    color: #ffffff;
     transition: color 0.3s ease;
 }
 
 #dark-mode-icon.fas.fa-sun,
 #dark-mode-icon.fas.fa-moon{
-    margin: 0; 
+    margin: 0 0 0 10px;
     padding: 0; 
+    color: var(--secondary-text-color)    ;
 }
 
 /* rotation animation */
@@ -1337,37 +1348,48 @@ body.dark-mode .social-contact a:hover {
     }
 
     .nav-menu.active {
-        /* display: flex; */
         right: 0;
     }
 
-    .nav-menu{
-        /* display: none;  */
-        width: 50%;
-        height: 100%;
+    .nav-menu {
+        width: 70vw;
+        max-width: 400px;
         position: fixed;
-        top: 60px;
+        top: 10vh;
         right: -100%;
-        background: rgb(0, 132, 255);
-        opacity: 0.9;
-        z-index: 0;
-        justify-content: center;
-        align-items: flex-start;
-        transition: 0.7s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        background: rgb(0, 140, 255);
+        backdrop-filter: blur(48px) saturate(180%) brightness(1.15);
+        -webkit-backdrop-filter: blur(48px) saturate(180%) brightness(1.15);
+        border-radius: 30px;
+        box-shadow: 0 16px 48px 0 rgba(0, 183, 255, 0.25), 0 24px 64px 0 rgba(0,0,0,0.18);
+        opacity: 0.98;
+        z-index: 100;
+        justify-content: flex-start;
+        align-items: stretch;
+        transition: right 0.7s cubic-bezier(.77,0,.18,1), background 0.3s, box-shadow 0.3s;
+        overflow-y: auto;
+        border: 3px solid #0044ff;
+        color: white;
     }
 
     .nav-menu .nav-list {
         display: flex;
         flex-direction: column;
-        padding-top: 50px;
+        padding-top: 40px;
+        padding-bottom: 40px;
         list-style-type: none;
         text-align: center;
-        justify-content: center;
+        justify-content: flex-start;
         row-gap: 50px;
+        width: 100%;
     }
 
     .nav-link{
         font-size: 1.5rem;
+        color: white;
+
     }
 
     .aboutme-image {
