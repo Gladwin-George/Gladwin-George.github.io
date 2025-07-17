@@ -198,9 +198,12 @@ nav a.nav-link:hover {
     animation: rotate 0.5s linear;
 }
 
-#dark-mode-icon.fas.fa-sun:hover{
-    color: #ffee00;
-    text-shadow: -1px 0 #ff0000, 0 1px #ff0000, 1px 0 #ff0000, 0 -1px #ff0000;
+#dark-mode-icon.fas.fa-sun:hover {
+    background: linear-gradient(135deg, #ff0000, #ffbb00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-stroke: 1px #ffffff;
 }
 
 #dark-mode-icon.fas.fa-moon:hover{
@@ -497,7 +500,7 @@ section {
 
 .heading{
     font-size: 50px;
-    background: linear-gradient(135deg, #007bff, #00d4ff);
+    background: linear-gradient(135deg, #007bff, #ae00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -511,12 +514,11 @@ section {
     font-weight:bolder;
 }
 
-.heading:hover{
-    background: linear-gradient(135deg, #00d4ff, #f700ff);
+.contact-heading{
+    background: linear-gradient(135deg, #007bff, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
 }
 
 .project-list {
