@@ -98,7 +98,7 @@ nav {
 }
 
 .nav-logo:hover {
-    color: var(--dark-blue-color);
+    color: var(--dark-bg-color);
 } 
 
 .nav-menu {
@@ -132,7 +132,7 @@ nav {
 }
 
 nav a.nav-link:hover {
-    color: white;
+    color: var(--bg-color);
     background: var(--primary-color-gradient); 
 } 
 
