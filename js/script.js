@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!linkHref.startsWith('#')) return;
 
             event.preventDefault();
-            const targetId = linkHref.substring(1);
+            const targetId = linkHref.substring(1);            
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
@@ -206,3 +206,30 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             }, 4000);
         });
 });
+
+
+// -------------------- Table of content Scroll Reveal --------------------
+// ...existing code...
+
+// -------------------- TOC Smooth Scroll with Offset --------------------
+document.querySelectorAll('.toc a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        // Get navbar height (adjust selector if needed)
+        const navbar = document.querySelector('nav');
+        const navHeight = navbar ? navbar.offsetHeight : 0;
+
+        // Calculate target position minus navbar height
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 10; // -10 for extra spacing
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+

@@ -1,8 +1,9 @@
 /* content */
 .content {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 100px;
+    padding: 50px;
+    padding-top: 100px;
     background: var(--learn-more-content-color);
 }
 .content h1, .content h2, .content h3, .content p, .content div {
@@ -91,4 +92,70 @@ ol, ul {
         padding: 20px;
         padding-top: 100px;
     }
+}
+
+/* Modern minimal sticky Table of Contents */
+.toc {
+    position: fixed;
+    float: left;
+    top: 120px;
+    margin-left: 90px;
+    border-radius: 20px;
+    border: 2px solid var(--secondary-text-color);
+    width: 250px;
+}
+
+.toc h1 {
+    font-size: 15px;
+    padding-left: 25px;
+    padding-top: 20px;
+    color: var(--secondary-text-color);
+
+}   
+
+ .toc ul {
+    list-style: none;
+    padding: 0;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+ .toc ul li {
+    margin-bottom: 5px;
+}
+
+ .toc ul li:last-child {
+    margin-bottom: 0;
+}
+
+ .toc ul li a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: color 0.2s, opacity 0.2s;
+    padding: 5px;
+    border-left: 2px solid transparent;
+    display: block;
+}
+
+ .toc ul li a:hover,
+ .toc ul li a.active {
+    color: #0066ff;
+    opacity: 1;
+    border-left: 2px solid #0066ff;
+    background: rgba(92, 152, 241, 0.07);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Responsive: hide TOC on small screens */
+@media screen and (max-width: 1500px) {
+    .toc {
+        display: none;
+    }
+}
+
+/* Add to your CSS file */
+.content h2, .content h3, .content h1 {
+    scroll-margin-top: 110px; 
 }
