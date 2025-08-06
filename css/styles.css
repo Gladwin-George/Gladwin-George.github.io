@@ -82,7 +82,7 @@ nav {
     top: 20px; 
     left: 50%;
     transform: translateX(-50%);
-    width: 98vw;           
+    width: 88vw;           
     max-width: 1400px;    
     height: 60px;
     z-index: 1000;
@@ -1339,7 +1339,7 @@ body.dark-mode .social-contact a:hover {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 845px) {
 
     .nav-toggle, .nav-close {
         position: absolute;
@@ -1540,7 +1540,7 @@ body.dark-mode .social-contact a:hover {
 
 }
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 360px) {
 
     .nav-logo{
         display: none;
