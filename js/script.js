@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // --- On-Scroll Animation ---
-    const elements = document.querySelectorAll('.fade-in, .slide-in-top, .slide-in-right, .skill, .shrinkInAndOut, .project-item, .filter-btn, .slide-in-left, .patent-card1');
+    const elements = document.querySelectorAll('.fade-in, .slide-in-top, .slide-in-right, .skill, .shrinkInAndOut, .project-item, .filter-btn, .slide-in-left');
 
     function checkVisibility() {
         const windowHeight = window.innerHeight;
